@@ -1,0 +1,10 @@
+{
+    "name": "first-console",
+    "version": "0.0.0",
+    "scripts": {
+        "start": "node ./app"
+    },
+    "dependencies": {
+        "debug": "~2.6.3"
+    }
+}
