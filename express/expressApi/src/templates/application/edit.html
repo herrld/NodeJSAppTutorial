@@ -1,0 +1,39 @@
+﻿<div>
+    <form action="post" class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label">Name</label>
+            <input class="form-control" type="text" ng-model="vm.data.name"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Executable(Full Path)</label>
+            <input type="Text" class="form-control" id="TargetFile" placeholder="C:\Users\user\target.exe" />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Param Seperator</label>
+            <input class="form-control" type="text" ng-model="vm.data.paramSeperator"
+        </div>
+
+        <div ng-repeat="param in vm.data.parameters" class="form-group">
+            <div class="row">
+                <label for="name{{param.order}}" class="control-label col-md-2">Parameter {{param.order}} Name:</label>
+                <div class="col-md-3">
+                    <input type="text" id="name{{param.order}}" class="form-control" ng-model="param.name" />
+                </div>
+                <label for="value{{param.order}}" class="col-md-2 control-label">Parameter {{param.order}} Value:</label>
+                <div class="col-md-3">
+                    <input class="form-control" id="value{{param.order}}" type="text" ng-model="param.value" />
+                </div>
+                <div class="col-md-2">
+                    <input class="form-control" type="button" value="Remove" ng-click="vm.removeParam(param)" />
+                </div>
+            </div>
+        </div>
+        <div> <input class="test" type="button" id="launch" value="Add Param" ng-click="vm.addParam()" /></div>
+        <div> <input class="test" type="button" id="save" value="Save" ng-click="vm.save()" /></div>
+
+    </form>
+    <span class="no-spacing" ng-repeat="icon in vm.icons"><img class="no-spacing" ng-src="{{icon.source}}" /><img class="no-spacing" width="200" height="48" src="images/Arrows-Right-icon.png" /></span><hr />
+</div>

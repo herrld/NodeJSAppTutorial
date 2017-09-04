@@ -1,0 +1,16 @@
+﻿<a href="Application/Edit/0">Create</a>
+<table class="table table-condensed">
+    <tr>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Start</th>
+    </tr>
+    <tr ng-repeat="a in vm.applications">
+        <td>{{a.name}}</td>
+        <td>
+            <a href="Application/Edit/{{a.id}}">{{a.name}}</a>
+        </td>
+        <td><input type="button" value="Start" ng-click="vm.start(a.id)"/></td>
+    </tr>
+   
+</table>
