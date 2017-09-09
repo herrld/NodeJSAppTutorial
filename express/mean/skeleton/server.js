@@ -23,8 +23,7 @@ app.use(stylus.middleware(
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
-
-app.get('/application*', function(req, res){
+app.get('/app/*', function(req, res){
     res.sendFile(__dirname+"/server/views/index.html")
     // res.render('index');
 });
