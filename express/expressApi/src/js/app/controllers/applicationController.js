@@ -5,7 +5,6 @@
         var vm = this;
         vm.applications;
         appDataService.getAllApps(function (response) {
-            debugger;
             vm.applications = response.data;
         })
        

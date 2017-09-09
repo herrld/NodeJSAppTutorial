@@ -15,7 +15,9 @@
 
         }
         this.getAllApps = function (onSuccess) {
-            $http.get(getAllUrl).then(onSuccess);
+            $http.get(getAllUrl).then(onSuccess,function (response){
+                alert("get error");
+            });
         }
 
         this.startApp = function (id, onSuccess) {

@@ -1,7 +1,6 @@
 ﻿(function () {
     angular.module("app-manager", ["ngRoute"])
         .config(["$routeProvider","$locationProvider",function ($routeProvider, $locationProvider) { 
-            debugger;
             $routeProvider.when("/Application/Edit/:Id",
                 {
                     controller: "applicationEditController",

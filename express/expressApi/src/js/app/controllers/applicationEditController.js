@@ -5,12 +5,13 @@
         var vm = this;
         vm.Id = $routeParams.Id;
         vm.icons = [{ source: "images/ok-icon.png" }, { source: "images/ok-icon.png" }];
-        debugger;
         $http.get("api/AppData/" + vm.Id)
             .then(function (response) {
                 vm.data = response.data;
                 vm.name = response.data.name;
                 //vm.data.parameters = response.data.parameters;
+            },function (response){
+                alert("get error");
             });
 
         vm.addParam = function () {
