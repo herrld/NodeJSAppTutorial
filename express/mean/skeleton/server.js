@@ -3,6 +3,8 @@ var stylus = require('stylus');
 var http = require('http');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var apiRouter = require('./server-routers/api-router');
+
 var env = process.env.Node_ENV = process.env.Node_ENV || 'development';
 
 var app = express();
@@ -20,12 +22,13 @@ app.use(stylus.middleware(
         compile : compile
     }
 ));
+app.use('/api',apiRouter);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
+
 app.get('/app/*', function(req, res){
     res.sendFile(__dirname+"/server/views/index.html")
-    // res.render('index');
 });
 
 var port = 3030;
@@ -34,4 +37,3 @@ var port = 3030;
 app.set('port',port);
 var server = http.createServer(app);
 server.listen(port);
-console.log("running");
