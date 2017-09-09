@@ -7,13 +7,13 @@
                     controllerAs:"vm",
                     templateUrl: "/templates/application/edit.html"
                 });
-            $routeProvider.when("/Application",
+            $routeProvider.when("/",
                 {
                     controller: "applicationController",
                     controllerAs: "vm",
                     templateUrl: "/templates/application/index.html"
                 });
             
-            $locationProvider.html5Mode(true);
+            // $locationProvider.html5Mode(true);
         }]);
 })();
