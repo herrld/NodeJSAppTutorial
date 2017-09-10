@@ -1,9 +1,7 @@
 var express = require('express')
 var router = express.Router();
+var reddit = require("../server-controllers/redditController");
 
-router.get('/', function (req, res, next) {
-    var testObj = { prop: "test prop" };
-    res.send(JSON.stringify(testObj));
-});
+router.get('/', reddit.all);
 
 module.exports = router;

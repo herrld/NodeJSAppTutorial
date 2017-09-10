@@ -26,9 +26,11 @@ app.use('/api',apiRouter);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
-
+app.get('/home*',function(req,res){
+    res.sendFile(__dirname+"/server/views/home/index.html")
+})
 app.get('/app/*', function(req, res){
-    res.sendFile(__dirname+"/server/views/index.html")
+    res.sendFile(__dirname+"/server/views/app-management/index.html")
 });
 
 var port = 3030;
@@ -37,3 +39,4 @@ var port = 3030;
 app.set('port',port);
 var server = http.createServer(app);
 server.listen(port);
+console.log(port);
