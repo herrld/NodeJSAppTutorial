@@ -33,7 +33,7 @@ app.get('/app/*', function(req, res){
     res.sendFile(__dirname+"/server/views/app-management/index.html")
 });
 
-var port = 3030;
+var port = process.env.PORT || 3030;
 
 
 app.set('port',port);
