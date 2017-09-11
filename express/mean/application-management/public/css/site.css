@@ -1,6 +1,13 @@
 body{
     padding-top: 60px;
 }
+.home-thumb{
+    height: 80px;
+    width: 80px;
+}
+.feed-item{
+    padding:5px;
+}
 /* .navbar-header:after{
     content: "";
     display: table;

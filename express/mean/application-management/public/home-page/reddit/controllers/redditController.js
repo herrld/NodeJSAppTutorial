@@ -1,10 +1,11 @@
 ///// <reference path
-var injectParams = ["$scope","$http"]
+var injectParams = ["$scope","$http","dataTransformService"]
 
 
-var redditController = function($scope, $http){
+var redditController = function($scope, $http, dataTransformService){
+    var vm = this;
     var successHandler = function(res){
-       $scope.data = res.data.data.children;
+       $scope.data = dataTransformService.redditToItems(res.data.data.children);
     };
     var errorHandler = function(res){
         var a = res;

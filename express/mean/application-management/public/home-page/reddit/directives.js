@@ -4,4 +4,4 @@ angular.module("homePage").directive('redditMain',function(){
         controller: "redditCtrl",
         controllerAs: "vm"
     }
-})
+});

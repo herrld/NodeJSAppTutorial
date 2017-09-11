@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\public\\home-page",
+    "\\public\\home-page\\main",
+    "\\public\\home-page\\main\\partials",
+    "\\server",
+    "\\server\\views",
+    "\\server\\views\\home"
+  ],
+  "SelectedNode": "\\server\\views\\home\\index.html",
+  "PreviewInSolutionExplorer": false
+}
