@@ -26,7 +26,8 @@ app.use('/api',apiRouter);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
-app.get('/home*',function(req,res){
+// app.get('/react/home*')
+app.get('/angular/home*',function(req,res){
     res.sendFile(__dirname+"/server/views/home/index.html")
 })
 app.get('/app/*', function(req, res){
